@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/AllSkyFree/Cold Sunset/Cold SunsetSettings.lighting.meta
 guid: 50b86a2d4891ec640a2f15a0526903b0
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 4890085278179872738
-========
-guid: b37a5b7f7f0c01e4db8f7e14454dbd3b
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
->>>>>>>> Luong-branch:Assets/VR Body/Animations/Left Hand Pinch Pose.anim.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
