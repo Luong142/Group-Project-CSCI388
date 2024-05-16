@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 516686130260266774, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2460012
+      value: -6.246
       objectReference: {fileID: 0}
     - target: {fileID: 516686130260266774, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       propertyPath: m_LocalPosition.y
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 516686130260266774, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7620008
+      value: 2.637
       objectReference: {fileID: 0}
     - target: {fileID: 516686130260266774, guid: abff5816a508a3d4dad931c6733e7e75, type: 3}
       propertyPath: m_LocalRotation.w
@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 242625998}
   - component: {fileID: 242626002}
   - component: {fileID: 242626001}
+  - component: {fileID: 242626003}
   m_Layer: 0
   m_Name: Left Teleport Controller ray
   m_TagString: Untagged
@@ -1496,6 +1497,19 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &242626003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242625994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906bfd4145afa9b4ab0b9a409c94b2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRInteractorLineVisual: {fileID: 242626001}
 --- !u!1 &287849676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497331348}
   m_Layer: 0
-  m_Name: -- MANAGERS --
+  m_Name: -- XR MANAGERS --
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3430,6 +3444,7 @@ GameObject:
   - component: {fileID: 781750215}
   - component: {fileID: 781750221}
   - component: {fileID: 781750220}
+  - component: {fileID: 781750222}
   m_Layer: 0
   m_Name: Right Teleport Controller ray
   m_TagString: Untagged
@@ -4074,6 +4089,19 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &781750222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781750213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906bfd4145afa9b4ab0b9a409c94b2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRInteractorLineVisual: {fileID: 781750220}
 --- !u!1 &806107529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,7 +4410,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
+  m_Height: 1.2
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
