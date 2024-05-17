@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayMusic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    public GameObject musicDish;
+
     void Start()
     {
-        
+        musicDish = GetComponent<GameObject>();
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
