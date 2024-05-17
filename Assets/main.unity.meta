@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/main.unity.meta
 guid: 0ba8c28ba4f90834bbff8f600cb94c11
+========
+guid: fab536117acefb3459628f15ce648a8d
+folderAsset: yes
+>>>>>>>> Luong-branch:Assets/Song.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
