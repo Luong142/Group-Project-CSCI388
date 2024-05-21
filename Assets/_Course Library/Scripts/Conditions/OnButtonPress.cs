@@ -11,20 +11,24 @@ public class OnButtonPress : MonoBehaviour
     public InputAction action = null;
 
     // When the button is pressed
-    public UnityEvent OnPress = new UnityEvent();
+    public UnityEvent OnPress1 = new UnityEvent();
+
+    public UnityEvent OnPress2 = new UnityEvent();
 
     // When the button is released
     public UnityEvent OnRelease = new UnityEvent();
 
     private void Awake()
     {
-        action.started += Pressed;
+        action.started += Pressed1;
+        action.canceled += Pressed2;
         action.canceled += Released;
     }
 
     private void OnDestroy()
     {
-        action.started -= Pressed;
+        action.started -= Pressed1;
+        action.canceled -= Pressed2;
         action.canceled -= Released;
     }
 
@@ -38,9 +42,14 @@ public class OnButtonPress : MonoBehaviour
         action.Disable();
     }
 
-    private void Pressed(InputAction.CallbackContext context)
+    private void Pressed1(InputAction.CallbackContext context)
     {
-        OnPress.Invoke();
+        OnPress1.Invoke();
+    }
+
+    private void Pressed2(InputAction.CallbackContext context)
+    {
+        OnPress2.Invoke();
     }
 
     private void Released(InputAction.CallbackContext context)

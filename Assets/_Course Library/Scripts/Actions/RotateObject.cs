@@ -9,13 +9,13 @@ public class RotateObject : MonoBehaviour
     [Range(0, 1)] public float sensitivity = 1.0f;
 
     [Tooltip("The max speed of the rotation")]
-    public float speed = 10.0f;
+    public float speed = 100.0f;
 
-    private bool isRotating = false;
+    public bool isRotating = false;
 
     public void SetIsRotating(bool value)
     {
-        if(value)
+        if (value)
         {
             Begin();
         }
