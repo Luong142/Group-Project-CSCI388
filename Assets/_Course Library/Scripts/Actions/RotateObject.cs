@@ -14,73 +14,88 @@ public class RotateObject : MonoBehaviour
 
     private float currentSpeed = 0.0f;
     private bool isRotating = false;
+    private Coroutine speedCoroutine;
 
     public void SetIsRotating(bool value)
     {
+        // add in to make the fan run on normal speed
+        if (speedCoroutine != null)
+        {
+            StopCoroutine(speedCoroutine);
+        }
+
         if (value)
         {
-            StartCoroutine(GraduallyIncreaseSpeed());
+            // control the speed if value is rotated then run it max speed
+            speedCoroutine = StartCoroutine(GraduallyChangeSpeed(maxSpeed));
         }
         else
         {
-            StartCoroutine(GraduallyDecreaseSpeed());
+            // else run gradually decrease the speed until 0.0f
+            speedCoroutine = StartCoroutine(GraduallyChangeSpeed(0.0f));
         }
     }
 
-    private IEnumerator GraduallyIncreaseSpeed()
+    private IEnumerator GraduallyChangeSpeed(float targetSpeed)
     {
-        // this will increase the speed gradually, the speed is not really fast.
-        isRotating = true;
-        while (currentSpeed < maxSpeed)
-        {
-            currentSpeed += maxSpeed * Time.deltaTime;
-            yield return null;
-        }
-        currentSpeed = maxSpeed;
-    }
+        float speedChangeRate = maxSpeed * Time.deltaTime;
 
-    private IEnumerator GraduallyDecreaseSpeed()
-    {
-        // this will decrease the speed gradually, the speed is okish.
-        while (currentSpeed > 0)
+        if (targetSpeed > currentSpeed)
         {
-            currentSpeed -= maxSpeed * Time.deltaTime;
-            yield return null;
+            // set to true if + the current with the speed change rate from (max speed)
+            isRotating = true;
+            while (currentSpeed < targetSpeed)
+            {
+                currentSpeed += speedChangeRate;
+                currentSpeed = Mathf.Min(currentSpeed, targetSpeed);
+                yield return null;
+            }
         }
-        currentSpeed = 0;
-        isRotating = false;
+        else
+        {
+            while (currentSpeed > targetSpeed)
+            {
+                currentSpeed -= speedChangeRate;
+                currentSpeed = Mathf.Max(currentSpeed, targetSpeed);
+                yield return null;
+            }
+
+            // set to false if minus the current with the speed change rate.
+            isRotating = false;
+        }
     }
 
     public void ToggleRotate()
     {
-        if (isRotating)
-        {
-            StartCoroutine(GraduallyDecreaseSpeed());
-        }
-        else
-        {
-            StartCoroutine(GraduallyIncreaseSpeed());
-        }
+        SetIsRotating(!isRotating);
     }
 
     public void SetSpeed(float value)
     {
         sensitivity = Mathf.Clamp(value, 0, 1);
         maxSpeed = sensitivity * 100.0f;
+
+        if (speedCoroutine != null)
+        {
+            StopCoroutine(speedCoroutine);
+        }
+
         if (maxSpeed == 0.0f)
         {
-            StartCoroutine(GraduallyDecreaseSpeed());
+            speedCoroutine = StartCoroutine(GraduallyChangeSpeed(0.0f));
         }
-        else if (!isRotating)
+        else
         {
-            StartCoroutine(GraduallyIncreaseSpeed());
+            speedCoroutine = StartCoroutine(GraduallyChangeSpeed(maxSpeed));
         }
     }
 
     private void Update()
     {
         if (isRotating)
+        {
             Rotate();
+        }
     }
 
     private void Rotate()

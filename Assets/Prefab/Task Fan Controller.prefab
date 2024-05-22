@@ -674,8 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 1
-  speed: 500
-  isRotating: 1
+  maxSpeed: 200
 --- !u!1 &3945945416552123704
 GameObject:
   m_ObjectHideFlags: 0
