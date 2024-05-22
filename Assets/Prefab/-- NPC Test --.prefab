@@ -1470,7 +1470,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.6
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1488,6 +1488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1985669738320048378}
   capsuleCollider: {fileID: 7344113178279357601}
+  soundCooldown: 6
 --- !u!1 &3868248825246806784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,37 +2771,6 @@ Transform:
   - {fileID: 4382500744690398151}
   m_Father: {fileID: 2034240827378451222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7862611505535214728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5035094192333812664}
-  m_Layer: 0
-  m_Name: -- UI NPC pop --
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5035094192333812664
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862611505535214728}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2830460594708628962}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8044210991577569017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,6 +3002,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2830460594708628962}
   - component: {fileID: 5125858001098534382}
+  - component: {fileID: 188591135932221446}
+  - component: {fileID: 4514749124653657327}
   m_Layer: 0
   m_Name: -- NPC Test --
   m_TagString: Untagged
@@ -3048,13 +3020,12 @@ Transform:
   m_GameObject: {fileID: 8936325062090166945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.168, y: 0, z: 2.562011}
+  m_LocalPosition: {x: -0.198, y: 0, z: 2.755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4015163819771448380}
   - {fileID: 7685601613642967881}
-  - {fileID: 5035094192333812664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &5125858001098534382
@@ -3078,6 +3049,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!195 &188591135932221446
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8936325062090166945}
+  m_Enabled: 0
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.4
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.6
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4514749124653657327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8936325062090166945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943699a085f69b44fb24c583df57661b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 188591135932221446}
+  range: 5
+  centrePoint: {fileID: 0}
 --- !u!1 &9180678649863529294
 GameObject:
   m_ObjectHideFlags: 0
