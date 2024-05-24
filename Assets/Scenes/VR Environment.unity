@@ -1266,11 +1266,11 @@ PrefabInstance:
       objectReference: {fileID: 18831245}
     - target: {fileID: 6383030160390918267, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7114496679516143763, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7228686808692027126, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_Enabled
