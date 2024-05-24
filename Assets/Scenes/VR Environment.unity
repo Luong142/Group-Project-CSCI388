@@ -628,7 +628,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4659095849635122553, guid: 958746e5775652140b60b943b491cbed, type: 3}
   m_PrefabInstance: {fileID: 1497323102054060014}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1817188103
+--- !u!4 &1862569494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 141140361461577826, guid: 6ee6811bf9db7a341b42ee3f618e0c05, type: 3}
+  m_PrefabInstance: {fileID: 423375724109231552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &2016884709
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -745,11 +750,6 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!4 &1862569494 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 141140361461577826, guid: 6ee6811bf9db7a341b42ee3f618e0c05, type: 3}
-  m_PrefabInstance: {fileID: 423375724109231552}
-  m_PrefabAsset: {fileID: 0}
 --- !u!21 &2053034496
 Material:
   serializedVersion: 8
@@ -1222,7 +1222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 840198060387236648, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_CameraYOffset
-      value: 1.3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 840198060387236648, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
