@@ -420,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807509375240140916, guid: 739397d5bae2c2144841554a3202448e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.24
+      value: 2.564
       objectReference: {fileID: 0}
     - target: {fileID: 7807509375240140916, guid: 739397d5bae2c2144841554a3202448e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -487,31 +487,7 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!1 &1487328578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 969888623732960506, guid: f98b17c85f13e6642bb5ba2f5f5eb430, type: 3}
-  m_PrefabInstance: {fileID: 7997951994419218273}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1487328579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487328578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_OverrideGenerateLinks: 0
-  m_GenerateLinks: 0
-  m_IgnoreFromBuild: 1
-  m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
---- !u!21 &1520536873
+--- !u!21 &1464861703
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -628,6 +604,30 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &1487328578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 969888623732960506, guid: f98b17c85f13e6642bb5ba2f5f5eb430, type: 3}
+  m_PrefabInstance: {fileID: 7997951994419218273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1487328579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487328578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1576270816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1283,7 +1283,7 @@ PrefabInstance:
     - target: {fileID: 7752075874795443008, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_LeftHandMoveAction.m_Reference
       value: 
-      objectReference: {fileID: -2706128282752906596, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+      objectReference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 8625455577034559917, guid: b0d53a5cab678f84196f0a784b776394, type: 3}
       propertyPath: m_InteractionManager
       value: 
