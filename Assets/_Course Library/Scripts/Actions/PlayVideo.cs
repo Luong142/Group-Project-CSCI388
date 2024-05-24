@@ -20,12 +20,16 @@ public class PlayVideo : MonoBehaviour
     private VideoPlayer videoPlayer = null;
     private MeshRenderer meshRenderer = null;
 
+    [Tooltip("Audio Source to control the 3D blending of the video")]
+    public AudioSource audioSource = null;
+
     private int index = 0;
 
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         videoPlayer = GetComponent<VideoPlayer>();
+        audioSource = GetComponent<AudioSource>();
 
         if (videoClips.Count > 0)
             videoPlayer.clip = videoClips[0];
@@ -86,6 +90,7 @@ public class PlayVideo : MonoBehaviour
     public void Play()
     {
         videoMaterial.color = Color.white;
+
         videoPlayer.Play();
     }
 
