@@ -4104,7 +4104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e311508d4777a834fb25a1729a564503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.1
+  threshold: 0.5
   OnBegin:
     m_PersistentCalls:
       m_Calls:
